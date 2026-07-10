@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bliss Bakes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#faf7ff;
+color:#444;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.95);
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-family:'Pacifico',cursive;
+font-size:34px;
+color:#7b2cbf;
+}
+
+nav a{
+text-decoration:none;
+margin-left:30px;
+font-weight:600;
+color:#444;
+transition:.3s;
+}
+
+nav a:hover{
+color:#7b2cbf;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:120px 8%;
+background:linear-gradient(135deg,#f7f2ff,#ffffff);
+gap:50px;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:58px;
+color:#6a0dad;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#7b2cbf;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#5a189a;
+transform:translateY(-4px);
+}
+
+.hero img{
+width:500px;
+max-width:100%;
+border-radius:25px;
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#6a0dad;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+color:#6a0dad;
+}
+
+.card p{
+padding:0 15px 20px;
+}
+
+.offer{
+background:#7b2cbf;
+color:white;
+text-align:center;
+padding:60px;
+border-radius:25px;
+}
+
+.offer h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.offer p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+.offer button{
+padding:15px 35px;
+border:none;
+background:white;
+color:#7b2cbf;
+font-size:18px;
+font-weight:bold;
+border-radius:50px;
+cursor:pointer;
+transition:.3s;
+}
+
+.offer button:hover{
+transform:scale(1.05);
+}
+
+footer{
+background:#2d1b45;
+color:white;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+padding:50px 8%;
+gap:30px;
+}
+
+footer h3{
+color:#d8b4fe;
+margin-bottom:15px;
+}
+
+footer p{
+line-height:2;
+}
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+padding:15px;
+border:none;
+border-radius:50%;
+background:#7b2cbf;
+color:white;
+font-size:20px;
+cursor:pointer;
+display:none;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+margin:10px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🎂 Bliss Bakes</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#offers">Offers</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Welcome to Bliss Bakes 💜</h1>
+
+<p>
+Discover handcrafted cakes, mouth-watering pastries, chocolate delights,
+and freshly baked treats prepared with premium ingredients.
+Every bite is made to spread happiness.
+</p>
+
+<a href="#menu" class="btn">Explore Menu</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=900" alt="Cake">
+
+</section>
+
+<section id="menu">
+
+<h2 class="title">Our Signature Menu</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="">
+<h3>Chocolate Cake</h3>
+<p>Soft chocolate sponge layered with creamy chocolate ganache.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?w=600" alt="">
+<h3>Chocolate Donuts</h3>
+<p>Fresh donuts dipped in premium Belgian chocolate.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600" alt="">
+<h3>Fresh Pastries</h3>
+<p>Light, fluffy pastries with delicious cream fillings.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600" alt="">
+<h3>Premium Chocolates</h3>
+<p>Luxury handmade chocolates crafted with rich cocoa.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="offers">
+
+<div class="offer">
+
+<h2>🎉 Weekend Sweet Offer</h2>
+
+<p>Buy Any Cake & Get 20% OFF on Premium Chocolates!</p>
+
+<button onclick="offer()">Claim Offer</button>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<div>
+
+<h3>Bliss Bakes</h3>
+
+<p>
+🎂 Cakes <br>
+🥐 Pastries <br>
+🍩 Donuts <br>
+🍫 Chocolates
+</p>
+
+</div>
+
+<div>
+
+<h3>Contact Us</h3>
+
+<p>
+📍 Jaipur, Rajasthan <br>
+📞 +91 9876543210 <br>
+📧 hello@blissbakes.com
+</p>
+
+</div>
+
+<div>
+
+<h3>Opening Hours</h3>
+
+<p>
+Monday - Sunday <br>
+9:00 AM - 10:00 PM
+</p>
+
+</div>
+
+</footer>
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+<script>
+
+function offer(){
+alert("🎉 Congratulations! You unlocked a 20% discount on Premium Chocolates.");
+}
+
+window.onscroll=function(){
+
+let btn=document.getElementById("topBtn");
+
+if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
+btn.style.display="block";
+}
+else{
+btn.style.display="none";
+}
+
+}
+
+function topFunction(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
