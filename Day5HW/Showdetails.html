@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Mission Challenge</title>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0b1020;
+    color:white;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#00e5ff;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:#151b35;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 0 15px rgba(0,255,255,.2);
+    display:none;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h2{
+    margin-top:15px;
+}
+
+.card p{
+    margin:8px 0;
+}
+
+.details{
+    display:none;
+    margin-top:15px;
+    padding:12px;
+    background:#222b50;
+    border-radius:8px;
+}
+
+.btn-details{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#00c853;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-details:hover{
+    transform:scale(1.03);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Student Cards - jQuery Mission Challenge</h1>
+
+<div class="container">
+
+    <div class="card">
+        <img src="khushi.jpeg">
+
+        <h2>Khushi Lakhera</h2>
+
+        <p><b>Branch:</b> CSE</p>
+
+        <button class="btn-details">Show Details</button>
+
+        <div class="details">
+            <p><b>Roll No:</b> 25ESKCS176</p>
+            <p><b>CGPA:</b> 8.32</p>
+            <p><b>Email:</b> khushilakhera07@gmail.com</p>
+            <p><b>Phone:</b> 8302693346</p>
+            <p><b>City:</b> Jaipur</p>
+        </div>
+
+    </div>
+
+    
+    <div class="card">
+
+        <img src="khusbhu.jpeg">
+
+        <h2>Khushbu Thakral</h2>
+
+        <p><b>Branch:</b> CSE</p>
+
+        <button class="btn-details">Show Details</button>
+
+        <div class="details">
+            <p><b>Roll No:</b> 25ESKCS174</p>
+            <p><b>CGPA:</b>9.5</p>
+            <p><b>Email:</b> khusbhu01@gmail.com</p>
+            <p><b>Phone:</b> 8387060001</p>
+            <p><b>City:</b> Jaipur</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <img src="kratika.jpeg">
+
+        <h2>Kratika Chouhan</h2>
+
+        <p><b>Branch:</b> CSE</p>
+
+        <button class="btn-details">Show Details</button>
+
+        <div class="details">
+            <p><b>Roll No:</b>25ESKCS179</p>
+            <p><b>CGPA:8.21</b></p>
+            <p><b>Email:</b> kratika16@gmail.com</p>
+            <p><b>Phone:</b> 9116998399</p>
+            <p><b>City:</b> Jaipur</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+    $(".card").fadeIn(1200);
+
+    $(".btn-details").click(function(){
+
+        $(this).closest(".card").find(".details").slideToggle(500);
+
+        if($(this).text()=="Show Details"){
+
+            $(this).text("Hide Details");
+
+            $(this).css({
+                "background":"#e53935"
+            });
+
+        }else{
+
+            $(this).text("Show Details");
+
+            $(this).css({
+                "background":"#00c853"
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
